@@ -44,7 +44,7 @@ function onFeedbackFormSubmit(event) {
 
   console.log(feedbackFormData);
 
-  feedbackFormObjectKeys = Object.keys(feedbackFormData);
+  const feedbackFormObjectKeys = Object.keys(feedbackFormData);
 
   for (const key of feedbackFormObjectKeys) {
     delete feedbackFormData[key];
