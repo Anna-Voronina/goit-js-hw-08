@@ -42,14 +42,14 @@ function onFeedbackFormFieldsInput(event) {
 function onFeedbackFormSubmit(event) {
   event.preventDefault();
 
-  // console.log(feedbackFormData);
+  console.log(feedbackFormData);
 
   feedbackFormObjectKeys = Object.keys(feedbackFormData);
 
   for (const key of feedbackFormObjectKeys) {
-    console.log(key);
+    delete feedbackFormData[key];
   }
 
-  // event.currentTarget.reset();
-  // localStorage.remove(FEEDBACK_FORM_KEY);
+  event.currentTarget.reset();
+  localStorage.remove(FEEDBACK_FORM_KEY);
 }
