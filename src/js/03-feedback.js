@@ -10,12 +10,13 @@ fillFeedbackFormFields();
 
 function fillFeedbackFormFields() {
   const feedbackFormDataFromLS = localStorage.load(FEEDBACK_FORM_KEY);
+  console.log(feedbackFormDataFromLS);
 
   if (feedbackFormDataFromLS === undefined) {
     return;
   }
 
-  for (key in feedbackFormDataFromLS) {
+  for (const key in feedbackFormDataFromLS) {
     if (feedbackFormDataFromLS.hasOwnProperty(key)) {
       feedbackFormEl.elements[key].value = feedbackFormDataFromLS[key];
       feedbackFormData[key] = feedbackFormDataFromLS[key];
