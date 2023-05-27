@@ -10,7 +10,6 @@ fillFeedbackFormFields();
 
 function fillFeedbackFormFields() {
   const feedbackFormDataFromLS = localStorage.load(FEEDBACK_FORM_KEY);
-  console.log(feedbackFormDataFromLS);
 
   if (feedbackFormDataFromLS === undefined) {
     return;
